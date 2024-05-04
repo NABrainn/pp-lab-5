@@ -1,5 +1,12 @@
+import company.beans.Person;
+import company.exceptions.InvalidAgeException;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args) throws InvalidAgeException {
+        try {
+            Person person = new Person("Mike", 240);
+        } catch (InvalidAgeException e) {
+            throw new InvalidAgeException();
+        }
     }
 }
